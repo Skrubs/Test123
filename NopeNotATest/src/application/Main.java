@@ -40,11 +40,14 @@ public class Main extends Application {
 		
 		c.setOnAction(e->{
 			
-				for(Node l : p.getChildren()) {
-						p.getChildren().remove(l);
-						
-					}
-				
+			if(!labelList.isEmpty()) {
+				Label labelToRemove = labelList.get(0);
+					p.getChildren().remove(labelToRemove);
+						labelList.remove(labelToRemove);
+			}
+			
+			
+			
 			
 		});
 		
